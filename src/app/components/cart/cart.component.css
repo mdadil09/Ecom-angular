@@ -1,0 +1,170 @@
+.cart-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.cart {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 65vw;
+  padding: 40px;
+  min-height: 60vh;
+  height: auto;
+  margin-bottom: 40px;
+  margin-right: 20px;
+}
+
+.cart-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.cart-img {
+  width: 15%;
+}
+
+.cart-title {
+  width: 35%;
+}
+
+.cart-price {
+  width: 15%;
+}
+
+.cart-btn {
+  width: 25%;
+}
+
+.buy-btn {
+  margin-right: 20px;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #17b169;
+  cursor: pointer;
+}
+
+.buy-btn:hover {
+  background-color: #018749;
+}
+
+.remove-btn {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #ef0107;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background-color: #cc0000;
+}
+
+img {
+  height: 42px;
+  width: 42px;
+}
+
+.cart-quantity {
+  display: flex;
+  width: 30%;
+}
+
+.inc-btn {
+  margin-right: 5px;
+  padding: 5px;
+  background: none;
+  border-radius: 3px;
+  border: 1px solid lightgrey;
+  width: 30px;
+}
+
+.dec-btn {
+  margin-left: 5px;
+  padding: 5px;
+  background: none;
+  border-radius: 3px;
+  border: 1px solid lightgrey;
+  width: 30px;
+}
+
+.cart-quantity p {
+  margin: 0;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid lightgrey;
+  width: 15px;
+  text-align: center;
+}
+
+hr {
+  border: 1px dotted lightgrey;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.total-price {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 20vw;
+  height: 30vh;
+  padding: 20px;
+}
+
+.total-upper {
+  display: flex;
+  justify-content: space-between;
+}
+
+hr {
+  border: 1px dotted lightgrey;
+}
+
+.total-middle {
+  margin-top: 20px;
+}
+
+.total-price-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.total-price-tax {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.total-price-ship {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.grand-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkout-btn {
+  margin-top: 15px;
+}
+
+.chc-btn {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}

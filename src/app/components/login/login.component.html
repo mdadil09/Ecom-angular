@@ -1,0 +1,36 @@
+<div class="auth-container">
+    <div class="auth-form">
+        <header>Sign In</header>
+        <form class="container" #loginForm="ngForm">
+            <div class="input">
+                <label for="">Email</label>
+                <input type="email" name="email" placeholder="Pleae Enter your email" required
+                    pattern="^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$" ngModel #email="ngModel" />
+                <h5 class="red-text" [hidden]="email.valid || email.untouched">
+                    Enter Correct email
+                </h5>
+            </div>
+            <div class="input">
+                <label for="">Password</label>
+                <input type="password" name="password" placeholder="Pleae Enter your password" required minlength="8"
+                    ngModel #password="ngModel" />
+                <h5 class="red-text" [hidden]="password.valid || password.untouched">
+                    Passowrd is required and password must be greater than 8
+                </h5>
+            </div>
+            <div class="auth-form-btn">
+                <button class="auth-btn" [disabled]="loginForm.invalid" (click)="register(loginForm)">
+                    Signin
+                </button>
+            </div>
+            <div class="auth-form-btn">
+                <button class="btn-red" (click)="reset(loginForm)">Reset</button>
+            </div>
+
+            <div class="login">
+                <p>Don't have an account? <a (click)="navigateToSignup()" routerLinkActive="active">Sign Up</a></p>
+            </div>
+        </form>
+    </div>
+
+</div>

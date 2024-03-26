@@ -1,0 +1,53 @@
+<div class="home-container">
+    <div class="hero-section">
+
+        <div class="hero-left-side">
+            <h1 class="hero-text">
+                Discover the Latest <br> Collection 2024
+            </h1>
+            <p class="hero-secondary-text">
+                Explore our curated collection of stylish<br> and high-quality
+                clothing. Find the<br> perfect outfit for every occasion and
+                <br>
+                stay ahead in fashion.
+            </p>
+            <a routerLink="/product" routerLinkActive="active">
+                <button class="hero-btn">
+                    Shop Now
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <div class="products-wrapper">
+        @for( p of arr; track p.id){
+        <div class="product-card">
+            <div class="product-badge">{{p.rating.toFixed(1)}} ⭐</div>
+
+            <div class="product-tumb">
+                <img src={{p.thumbnail}} alt="" />
+            </div>
+            <div class="product-details">
+                <span class="product-catagory">{{p.category}}</span>
+                <h4>
+                    <a>{{p.title}}</a>
+                </h4>
+                <p>
+                    {{getFirstLine(p.description)}}
+                </p>
+                <div class="product-bottom-details">
+                    <div class="product-price">
+                        <small>${{p.price}}</small>$
+                        {{getPriceAfterDiscount(p.price, p.discountPercentage)}}
+                    </div>
+                    <div class="product-links">
+                        <button (click)="addToCart(p,p.id)">
+                            Add to cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</div>

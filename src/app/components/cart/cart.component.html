@@ -1,0 +1,68 @@
+<div class="cart-container">
+
+    <div class="cart">
+        <h3>Shopping Cart</h3>
+        <hr>
+        @for(c of cartService.cartLocalArr; track c.product.id){
+        <div class="cart-card">
+            <div class="cart-img">
+                <img src={{c.product.thumbnail}} alt="">
+            </div>
+
+            <div class="cart-title">
+                <p>{{c.product.title}}</p>
+            </div>
+
+            <div class="cart-price">
+                <p>${{c.product.price*c.quantity}}</p>
+            </div>
+
+            <div class="cart-quantity">
+                <button class="inc-btn" (click)="incrementQuantity(c.product.id)">+</button>
+                <p>{{c.quantity}}</p>
+                <button class="dec-btn" (click)="decrementQuantity(c.product.id)">-</button>
+            </div>
+
+            <div class="cart-btn">
+                <button class="buy-btn">Buy Now</button>
+
+                <button class="remove-btn" (click)="removeFromCart(c.product.id)">Remove</button>
+            </div>
+        </div>
+        }
+    </div>
+    <div class="total-price">
+        <div class="total-upper">
+            <h3>Cart Total</h3>
+            <h3>${{getPrice(cartService.cartLocalArr)}}</h3>
+        </div>
+        <hr>
+        <div class="total-middle">
+            <div class="total-price-text">
+                <h4>Price</h4>
+                <p>${{getPrice(cartService.cartLocalArr)}}</p>
+            </div>
+            <div class="total-price-tax">
+                <h4>Tax</h4>
+                <p>$0</p>
+            </div>
+            <div class="total-price-ship">
+                <h4>Shipping</h4>
+                <p>$5</p>
+            </div>
+        </div>
+        <hr>
+        <div class="total-lower">
+            <div class="grand-total">
+                <h4>Grand Total</h4>
+                <p>${{cartService.cartLocalArr.length > 0 ? (+getPrice(cartService.cartLocalArr)) + (+num) : "0.00"}}
+                </p>
+            </div>
+        </div>
+        <div class="checkout-btn">
+            <button class="chc-btn">
+                Checkout
+            </button>
+        </div>
+    </div>
+</div>

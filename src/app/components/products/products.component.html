@@ -1,0 +1,34 @@
+<div class="home-container">
+    <h3>All Products</h3>
+    <div class="products-wrapper">
+        @for( p of arr; track p.id){
+        <div class="product-card">
+            <div class="product-badge">{{p.rating.toFixed(1)}} ⭐</div>
+
+            <div class="product-tumb">
+                <img src={{p.thumbnail}} alt="" />
+            </div>
+            <div class="product-details">
+                <span class="product-catagory">{{p.category}}</span>
+                <h4>
+                    <a>{{p.title}}</a>
+                </h4>
+                <p>
+                    {{getFirstLine(p.description)}}
+                </p>
+                <div class="product-bottom-details">
+                    <div class="product-price">
+                        <small>${{p.price}}</small>$
+                        {{getPriceAfterDiscount(p.price, p.discountPercentage)}}
+                    </div>
+                    <div class="product-links">
+                        <button>
+                            Add to cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</div>

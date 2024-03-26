@@ -1,0 +1,95 @@
+.auth-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 430px;
+  width: 100%;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.auth-form {
+  padding: 40px;
+}
+
+.auth-form header {
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.input label {
+  margin-bottom: 10px;
+}
+
+.input input {
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 8px;
+}
+
+.input input:focus {
+  outline: none;
+}
+
+.auth-form-btn {
+  padding: 10px;
+}
+
+.auth-btn {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.auth-btn:hover {
+  background-color: #0056b3;
+}
+
+.btn-red {
+  width: 100%;
+  background-color: #ef0107;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-red:hover {
+  background-color: #cc0000;
+}
+
+.input h5 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #cc0000;
+}
+
+.login {
+  margin-top: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.login a {
+  color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
+}
